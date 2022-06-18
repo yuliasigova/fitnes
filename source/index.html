@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Главная страница фитнес-центра Sypergym">
+  <title>Фитнес </title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="header container">
+    <a>
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg">
+        <source media="(max-width: 1199px)" srcset="img/svg/logo-tablet.svg">
+        <img src="img/svg/logo-desktop.svg" width="89" height="20" alt="Лого сайта">
+      </picture>
+    </a>
+    <a class="header__link" href="tel:88005555555">8-800-555-55-55</a>
+  </header>
+  <main>
+    <section class="caption">
+      <div class="caption__wrapper container">
+        <div class="caption__block">
+          <span>Омск</span>
+          <h1>Фитнес<br>центр</h1>
+          <ul>
+            <li>Тренажёрный зал</li>
+            <li>Групповые занятия</li>
+            <li>Кардио-зона</li>
+          </ul>
+          <a href="">Купить абонимент</a>
+        </div>
+        <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/man-desktop.webp,
+            img/man-desktop@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px) and (min-width: 768px)"
+            srcset="img/man-tablet.webp, img/man-tablet@2x.webp 2x">
+          <!--1x: 500px; 2x: 1000px for desktop-->
+          <!--1x: 324px; 2x: 648px for tablet -->
+          <img srcset="
+          img/man-desktop.jpg 500w,
+        img/man-tablet.jpg 324w,
+        img/man-desktop@2x.jpg 1000w,
+        img/man-tablet@2x.jpg 648w" sizes="
+        (max-width: 1199px) 324px,
+        (min-width: 1200px) 500px" src="img/man-desktop.jpg" width="500" height="556" alt="Картинка с товаром">
+        </picture>
+        <ul class="caption__list">
+          <li>
+            <a href="#">FB</a>
+          </li>
+          <li>
+            <a href="#">VK</a>
+          </li>
+          <li>
+            <a href="#">IG</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="description">
+      <div>
+        <h2>Тренажерный зал</h2>
+        <h3>Просторный зал площадью 900 кв/м</h3>
+        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
+        Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
+        <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
+        несколько оборудованных залов для различных видов групповых занятий.</p>
+      </div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1200px)" srcset="img/gym-desktop.webp,
+          img/gym-desktop@2x.webp 2x">
+        <source type="image/webp" media="(max-width: 1199px) and (min-width: 768px)"
+          srcset="img/gym-tablet.webp, img/gym-tablet@2x.webp 2x">
+        <source type="image/webp" media="(max-width: 767px) and (min-width: 320px)"
+          srcset="img/gym-mobile.webp, img/gym-mobile@2x.webp 2x">
+        <!--1x: 500px; 2x: 1000px for desktop-->
+        <!--1x: 324px; 2x: 648px for tablet -->
+        <!--1x: 324px; 2x: 648px for tablet -->
+      <img srcset="
+        img/gym-desktop.jpg 660w,
+        img/gym-tablet.jpg 678w,
+        img/gym-mobile.jpg 320w,
+        img/gym-desktop@2x.jpg 1000w,
+        img/gym-tablet@2x.jpg 648w,
+        img/gym-mobile@2x.jpg 640w"
+      sizes="
+      (max-width: 1199px) 324px,
+      (min-width: 1200px) 500px" src="img/gym-desktop.jpg" width="660" height="401" alt="Изображение с тренажерным залом">
+      </picture>
+      <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </main>
+  <footer class="footer">
+
+
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

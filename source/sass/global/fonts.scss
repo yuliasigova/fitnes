@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "BN";
+  src: local ("BN"),
+  url("../fonts/bebasneueregular.woff2") format("woff2"),
+    url("../fonts/bebasneueregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BN";
+  src: local('BN'),
+  url("../fonts/bebasneuebold.woff2") format("woff2"),
+    url("../fonts/bebasneuebold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/robotocondensedlight.woff2") format("woff2"),
+    url("../fonts/robotocondensedlight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/robotocondensedregular.woff2") format("woff2"),
+    url("../fonts/robotocondensedregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/robotocondensedbold.woff2") format("woff2"),
+    url("../fonts/robotocondensedbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
