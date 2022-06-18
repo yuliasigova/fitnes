@@ -15,6 +15,8 @@
 
   @media (max-width: $vp-1199) {
     min-height: 554px;
+    top: -65px;
+    margin-bottom: -65px;
   }
 
   @media (max-width: $vp-767) {
@@ -38,6 +40,7 @@
   @media (max-width: $vp-767) {
     grid-template-columns: 290px;
     justify-content: end;
+    padding-bottom: 79px;
   }
 }
 
@@ -55,7 +58,7 @@
   }
 
   @media (max-width: $vp-767) {
-    padding-top: 112px;
+    padding-top: 136px;
   }
 }
 
@@ -121,7 +124,7 @@
   }
 
   @media (max-width: $vp-767) {
-    top: 57%;
+    top: 59%;
   }
 }
 

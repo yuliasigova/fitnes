@@ -709,7 +709,81 @@ button,
   display: grid;
   -ms-grid-columns: 1fr auto;
   grid-template-columns: 1fr auto;
-  grid-column-gap: 85px;
+  grid-column-gap: 80px;
+  padding-bottom: 240px;
+}
+
+.description__info {
+  padding-top: 48px;
+  padding-left: 60px;
+}
+
+.description__info h2 {
+  margin: 0;
+  font-family: "BN", tahoma, sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  margin-bottom: 5px;
+}
+
+.description__info h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.description__info p {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.description__media {
+  position: relative;
+}
+
+.description__media img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.description__video {
+  position: absolute;
+  width: 364px;
+  top: 287px;
+  left: -65px;
+}
+
+.description__video::before {
+  content: "";
+  position: absolute;
+  width: 364px;
+  height: 228px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(20, 54, 122, 0.5);
+}
+
+.description__video img {
+  position: absolute;
+  top: 0;
+}
+
+.description__video button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: url("../img/svg/button.svg");
+  background-size: contain;
+  border: none;
+  z-index: 2;
+  top: 63px;
+  left: 134px;
 }
 
 @media (max-width: 1199px) {
@@ -737,6 +811,8 @@ button,
 
   .caption {
     min-height: 554px;
+    top: -65px;
+    margin-bottom: -65px;
   }
 
   .caption__wrapper {
@@ -774,6 +850,77 @@ button,
   .caption__list {
     display: none;
   }
+
+  .description {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    padding: 0 45px;
+    margin-top: 100px;
+  }
+
+  .description__info {
+    padding: 0;
+    text-align: center;
+  }
+
+  .description__info h2 {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 7px;
+  }
+
+  .description__info h3 {
+    margin-bottom: 35px;
+  }
+
+  .description__info p {
+    padding: 0 80px;
+    margin-bottom: 44px;
+  }
+
+  .description__info p:last-child {
+    display: none;
+  }
+
+  .description__media {
+    width: 678px;
+  }
+
+  .description__media img {
+    height: 345px;
+  }
+
+  .description__video::before {
+    width: 266px;
+    height: 167px;
+  }
+
+  .description__video {
+    width: 266px;
+    height: 167px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    top: 262px;
+  }
+
+  .description__video iframe {
+    width: 266px;
+    height: 167px;
+  }
+
+  .description__video img {
+    width: 266px;
+    height: 167px;
+  }
+
+  .description__video button {
+    width: 73px;
+    height: 73px;
+    top: 47px;
+    left: 95px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -807,10 +954,11 @@ button,
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: end;
+    padding-bottom: 79px;
   }
 
   .caption__block {
-    padding-top: 112px;
+    padding-top: 136px;
   }
 
   .caption__block span {
@@ -826,7 +974,7 @@ button,
   }
 
   .caption__block ul {
-    top: 57%;
+    top: 59%;
   }
 
   .caption__block a {
@@ -835,5 +983,64 @@ button,
 
   .caption img {
     display: none;
+  }
+
+  .description {
+    padding: 0;
+    margin-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .description__info {
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .description__info h2 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 5px;
+  }
+
+  .description__info h3 {
+    margin-bottom: 23px;
+  }
+
+  .description__info p {
+    padding: 0;
+    padding-right: 21px;
+    margin-bottom: 35px;
+  }
+
+  .description__media {
+    width: 320px;
+  }
+
+  .description__media img {
+    height: 313px;
+    margin-bottom: 40px;
+  }
+
+  .description__video::before {
+    width: 320px;
+  }
+
+  .description__video {
+    width: 320px;
+    position: relative;
+    top: 0;
+  }
+
+  .description__video iframe {
+    width: 320px;
+  }
+
+  .description__video img {
+    width: 320px;
+    height: 167px;
+  }
+
+  .description__video button {
+    left: 123px;
   }
 }
