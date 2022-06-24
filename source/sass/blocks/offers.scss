@@ -1,0 +1,139 @@
+.offers {
+  padding-top: 122px;
+  margin-bottom: 120px;
+
+  @media (max-width: $vp-1199) {
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+.offers h2 {
+  font-family: $ff-bebas;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 50px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 40px;
+  }
+}
+
+.offers ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+
+  @media (max-width: $vp-1199) {
+    grid-gap: 30px;
+  }
+}
+
+.offers li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 18px 28px 28px;
+  color: $color-resolution-blue;
+  border: 7px solid $color-default-white;
+  border-image: $red-to-blue;
+  border-image-slice: 1;
+
+  &:first-of-type {
+    grid-column: 1;
+    grid-row: 1/ span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    border: none;
+
+    @media (max-width: $vp-1199) {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+      grid-template-columns: 1fr 399px;
+    }
+  }
+}
+
+.offers div {
+  color: $color-default-white;
+  background-color: $color-torch-red;
+  padding: 34px 45px 45px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.offers h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.offers p {
+  margin: 0;
+  margin-bottom: 30px;
+  flex-grow: 1;
+
+  @media (max-width: $vp-1199) {
+    margin-bottom: 49px;
+  }
+}
+
+.offers span {
+  display: block;
+  font-weight: 700;
+  font-size: 70px;
+  margin-top: 8px;
+}
+
+.offers a {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-resolution-blue;
+  border-bottom: 1px solid $color-resolution-blue;
+  width: 68px;
+}
+
+.offers li:first-of-type h3 {
+  font-size: 28px;
+  line-height: 44px;
+  margin-bottom: 30px;
+}
+
+.offers li:first-of-type p {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.offers li:first-of-type a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  border-bottom: 1px solid $color-default-white;
+  width: 79px;
+}
+
+.offers img {
+  @media (max-width: $vp-1199) {
+    width: 399px;
+    height: 462px;
+  }
+}

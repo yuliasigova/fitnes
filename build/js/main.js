@@ -93,7 +93,48 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+var tabs = document.querySelector('.subscriptions');
+var contents = document.querySelectorAll('.subscriptions__info');
+tabs.addEventListener('click', function (evt) {
+  var id = evt.target.dataset.id;
 
+  if (id) {
+    contents.forEach(function (content) {
+      content.classList.remove('is-active');
+      content.classList.add('is-close');
+    });
+    var element = document.getElementById(id);
+    element.classList.add('is-active');
+  }
+});
+var rightButton = document.querySelector('.reviews__button--right');
+var leftButton = document.querySelector('.reviews__button--left');
+var reviews = document.querySelectorAll('.reviews__card');
+var index = 1;
+rightButton.addEventListener('click', function () {
+  index = index + 1;
+  showReview();
+});
+leftButton.addEventListener('click', function () {
+  index = index - 1;
+  showReview();
+});
+
+var showReview = function showReview() {
+  if (index >= reviews.length) {
+    index = reviews.length;
+  }
+
+  if (index < 1) {
+    index = 1;
+  }
+
+  reviews.forEach(function (review) {
+    review.classList.remove('is-active');
+    review.classList.add('is-close');
+  });
+  reviews[index - 1].classList.add('is-active');
+};
 
 /***/ })
 

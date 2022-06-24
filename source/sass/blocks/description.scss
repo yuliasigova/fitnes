@@ -1,15 +1,16 @@
 .description {
-  margin-top: 66px;
+  margin-top: 120px;
   padding: 0 calc(50% - 580px);
   display: grid;
   grid-template-columns: 1fr auto;
   grid-column-gap: 80px;
-  padding-bottom: 240px;
+  padding-bottom: 230px;
 
   @media (max-width: $vp-1199) {
     grid-template-columns: 1fr;
     padding: 0 45px;
     margin-top: 100px;
+    padding-bottom: 185px;
   }
 
   @media (max-width: $vp-767) {
@@ -151,7 +152,7 @@
     height: 167px;
     left: 50%;
     transform: translate(-50%);
-    top: 262px;
+    top: 260px;
   }
 
   @media (max-width: $vp-767) {

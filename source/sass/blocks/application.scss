@@ -1,0 +1,9 @@
+.application {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: $vp-1199) {
+    grid-template-columns: 1fr;
+  }
+}
+

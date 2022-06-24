@@ -1,0 +1,166 @@
+.coaches {
+  margin-bottom: 120px;
+}
+
+.coaches h2 {
+  margin: 0;
+  font-family: $ff-bebas;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 42px;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.coaches ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(226px, 260px));
+  gap: 40px;
+  color: $color-default-white;
+
+  @media (max-width: $vp-1199) {
+    padding: 0 56px;
+    grid-template-columns: repeat(auto-fill, 268px);
+    gap: 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    grid-template-columns: repeat(auto-fill, 226px);
+    padding: 0 32px;
+  }
+}
+
+.coaches button {
+  display: none;
+}
+
+.coaches__card {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 294px;
+  position: relative;
+
+  &--close {
+    display: none;
+  }
+
+  @media (max-width: $vp-1199) {
+    width: 268px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 226px;
+    height: 274px;
+  }
+}
+
+.coaches h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 23px;
+}
+
+.coaches__card img {
+  width: 100%;
+  height: 294px;
+  object-fit: cover;
+
+  @media (max-width: $vp-767) {
+    height: 274px;
+  }
+}
+
+.coaches__layout {
+  position: absolute;
+  display: none;
+  background-color: $color-sapphire--89;
+  width: 260px;
+  height: 294px;
+  padding: 52px 40px;
+  top: 0;
+
+  @media (max-width: $vp-1199) {
+    width: 268px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 226px;
+    height: 274px;
+  }
+}
+
+.coaches__card:focus-within .coaches__layout,
+.coaches__card:hover .coaches__layout {
+  display: block;
+}
+
+.coaches__layout p {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+}
+
+.coaches__layout span {
+  display: block;
+  margin-bottom: 29px;
+  text-align: center;
+}
+
+.coaches__layout ul {
+  display: block;
+
+  @media (max-width: $vp-1199) {
+    padding: 0;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 0;
+  }
+}
+
+.coaches__layout li {
+  font-size: 14px;
+  line-height: 21px;
+  position: relative;
+  margin-bottom: 13px;
+  padding-left: 31px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: $color-default-white;
+    border-radius: 50%;
+    top: 7px;
+    left: 14px;
+  }
+}
+
+.coaches__card:nth-child(2n+1) {
+  @media (max-width: $vp-1199) {
+    display: none;
+  }
+}

@@ -1,0 +1,151 @@
+.advantages {
+  background-color: $color-ghost-white;
+  padding: 120px 0;
+
+  @media (max-width: $vp-1199) {
+    padding: 100px 0;
+  }
+}
+
+.advantages h2 {
+  font-family: $ff-bebas;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 38px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 27px;
+  }
+}
+
+.advantages ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 340px 240px 340px;
+  grid-template-rows: 1fr auto;
+  padding: 0 61px;
+  grid-column-gap: 60px;
+  grid-row-gap: 73px;
+
+
+  @media (max-width: $vp-1199) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-column-gap: 30px;
+    grid-row-gap: 51px;
+    padding: 0;
+  }
+}
+
+.advantages li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 30px;
+
+  &:nth-child(3) {
+    background-color: $color-resolution-blue;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    color: $color-default-white;
+    padding: 37px 30px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    @media (max-width: $vp-1199) {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+  }
+
+  &:nth-child(1n + 4) {
+    border-top: 2px solid $color-crimson--20;
+    padding-top: 55px;
+
+    @media (max-width: $vp-1199) {
+      border-top: none;
+    }
+  }
+
+  @media (max-width: $vp-1199) {
+    padding-right: 30px;
+  }
+}
+
+.advantages p {
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 106px;
+  background: linear-gradient(127.61deg, #D10A42 0%, #0041CA 45.58%);
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  position: relative;
+  justify-self: center;
+
+  @media (max-width: $vp-1199) {
+    font-size: 58px;
+    line-height: 87px;
+  }
+}
+
+.advantages span {
+  display: block;
+  color: $color-persian-blue;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  position: absolute;
+  top: 85px;
+}
+
+.advantages dl {
+  margin: 0;
+
+  @media (max-width: $vp-1199) {
+    margin-top: 14px;
+  }
+}
+
+.advantages dt {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 7px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.advantages dd {
+  margin: 0;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.advantages li:nth-child(3) p {
+  background: $color-default-white;
+  background-clip: text;
+}
+
+.advantages li:nth-child(3) dt {
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.advantages li:nth-child(3) dd {
+  line-height: 24px;
+}
+
+.advantages li:nth-child(3) dl {
+  margin-top: 0;
+}
