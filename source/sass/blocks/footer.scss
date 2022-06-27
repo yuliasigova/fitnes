@@ -5,22 +5,29 @@
 .footer__wrapper {
   display: grid;
   grid-template-columns: 100px 1fr 100px;
-  padding: 40px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
   gap: 60px;
   align-items: center;
 
   @media (max-width: $vp-1199) {
     gap: 43px;
+    padding-top: 43px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 }
 
-.footer ul {
+.footer__menu {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.footer__menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -30,6 +37,25 @@
 
   @media (max-width: $vp-1199) {
     gap: 30px;
+    width: 392px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 100%;
+    columns: 2;
+    display: block;
+  }
+}
+
+.footer__menu li {
+  @media (max-width: $vp-767) {
+   margin-top: 21px;
+  }
+}
+
+.footer__menu li:first-child {
+  @media (max-width: $vp-767) {
+   margin-top: 37px;
   }
 }
 
@@ -38,17 +64,78 @@
   line-height: 16px;
   color: $color-default-white;
   display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .footer__social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   justify-self: right;
+
+  @media (max-width: $vp-1199) {
+    align-self: center;
+    justify-self: center;
+    gap: 20px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-top: 25px;
+    align-self: flex-start;
+    gap: 33px;
+  }
 }
 
 .footer img {
   @media (max-width: $vp-1199) {
     width: 82px;
+    height: 18px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 68px;
+    height: 15px;
+    position: absolute;
+    left: 15px;
+  }
+}
+
+.footer svg {
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+.footer__social-item--fb svg {
+  @media (max-width: $vp-767) {
+    width: 14px;
+    height: 27px;
+  }
+}
+
+.footer__social-item--insta svg {
+  @media (max-width: $vp-767) {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+.footer__social-item--vk svg {
+  @media (max-width: $vp-767) {
+    width: 32px;
+    height: 27px;
   }
 }

@@ -10,7 +10,7 @@
     grid-template-columns: 1fr;
     padding: 0 45px;
     margin-top: 100px;
-    padding-bottom: 185px;
+    padding-bottom: 183px;
   }
 
   @media (max-width: $vp-767) {
@@ -84,7 +84,7 @@
   @media (max-width: $vp-767) {
     padding: 0;
     padding-right: 21px;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
   }
 }
 
@@ -96,14 +96,6 @@
 
 .description__media {
   position: relative;
-
-  @media (max-width: $vp-1199) {
-    width: 678px;
-  }
-
-  @media (max-width: $vp-767) {
-    width: 320px;
-  }
 }
 
 .description__media img {
@@ -124,28 +116,9 @@
 .description__video {
   position: absolute;
   width: 364px;
+  height: 228px;
   top: 287px;
   left: -65px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    width: 364px;
-    height: 228px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background-color: $color-dark-cerulean--50;
-
-    @media (max-width: $vp-1199) {
-      width: 266px;
-      height: 167px;
-    }
-
-    @media (max-width: $vp-767) {
-      width: 320px;
-    }
-  }
 
   @media (max-width: $vp-1199) {
     width: 266px;
@@ -162,7 +135,36 @@
   }
 }
 
+.description__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: $color-dark-cerulean--50;
+    @media (max-width: $vp-1199) {
+      width: 266px;
+      height: 167px;
+    }
+
+    @media (max-width: $vp-767) {
+      width: 320px;
+    }
+  }
+}
+
 .description__video iframe {
+  border: none;
+
   @media (max-width: $vp-1199) {
     width: 266px;
     height: 167px;
@@ -188,7 +190,7 @@
   }
 }
 
-.description__video button {
+.description__overlay button {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -198,6 +200,7 @@
   z-index: 2;
   top: 63px;
   left: 134px;
+  cursor: pointer;
 
   @media (max-width: $vp-1199) {
     width: 73px;
@@ -209,4 +212,8 @@
   @media (max-width: $vp-767) {
     left: 123px;
   }
+}
+
+.description__overlay.is-active {
+  display: none;
 }

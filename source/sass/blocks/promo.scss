@@ -21,6 +21,10 @@
   @media (max-width: $vp-1199) {
     padding: 45px 46px;
   }
+
+  @media (max-width: $vp-767) {
+    padding-bottom: 50px;
+  }
 }
 
 .promo__info {
@@ -125,3 +129,9 @@
   }
 }
 
+.promo img {
+  @media (max-width: $vp-1199) {
+    height: 292px;
+    object-fit: cover;
+  }
+}

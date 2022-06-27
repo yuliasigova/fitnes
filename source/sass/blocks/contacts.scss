@@ -1,18 +1,45 @@
 .contacts {
   border-top: 1px solid $color-light-slate-grey;
-  padding-bottom: 64px;
+  padding-bottom: 46px;
+  padding-top: 70px;
+
+  @media (max-width: $vp-1199) {
+    padding-bottom: 40px;
+  }
 }
 
 .contacts__wrapper {
+  position: relative;
   max-width: 580px;
-  margin: 0 auto;
-  padding-top: 70px;
-  padding-right: calc(50% - 290px);
-  padding-left: 70px;
+  padding-left: 120px;
 
   @media (max-width: $vp-1199) {
-    padding-left: 133px;
-    margin: 0;
+    margin: 0 auto;
+    padding-left: 40px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-left: 15px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 103px;
+    background: $color-light-slate-grey;
+    top: 94px;
+    left: 61%;
+    background-repeat: no-repeat;
+
+    @media (max-width: $vp-1199) {
+      top: 82px;
+      left: 52.5%;
+      height: 130px;
+    }
+
+    @media (max-width: $vp-767) {
+      background: transparent;
+    }
   }
 }
 
@@ -23,15 +50,34 @@
   line-height: 49px;
   letter-spacing: 0.03em;
   margin-bottom: 39px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 32px;
+  }
+  @media (max-width: $vp-767) {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
 
 .contacts ul {
   padding: 0;
   margin: 0;
-  margin-left: 4px;
   list-style: none;
   columns: 2;
-  column-rule: 1px solid $color-light-slate-grey;
+  column-gap: 100px;
+
+  @media (max-width: $vp-1199) {
+    margin-left: 0;
+    column-gap: 86px;
+  }
+
+  @media (max-width: $vp-767) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .contacts h3 {
@@ -40,20 +86,25 @@
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 3px;
+
+  @media (max-width: $vp-1199) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .contacts li {
   margin-bottom: 18px;
   font-size: 14px;
   line-height: 21px;
-}
+  margin-left: 4px;
 
-li:nth-last-child(odd) {
-  margin-bottom: 0;
-}
-
-li:nth-last-child {
-  padding-left: 60px;
+  @media (max-width: $vp-1199) {
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 23px;
+    margin-left: 0;
+  }
 }
 
 .contacts address {
@@ -66,4 +117,20 @@ li:nth-last-child {
 
 .contacts a {
   color: inherit;
+}
+
+.contacts li:nth-child(3n) {
+  margin-left: 14px;
+
+  @media (max-width: $vp-1199) {
+    margin-left: 0px;
+  }
+}
+
+.contacts li:nth-child(4n) {
+  margin-left: 14px;
+
+  @media (max-width: $vp-1199) {
+    margin-left: 0px;
+  }
 }

@@ -1,42 +1,55 @@
 .subscriptions {
   background-color: $color-ghost-white;
   margin-bottom: 120px;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: $vp-1199) {
-    margin-bottom: 105px;
+    margin-bottom: 97px;
   }
 
   @media (max-width: $vp-767) {
-    margin-bottom: 63px;
+    margin-bottom: 70px;
   }
-
 }
 
 .subscriptions__wrapper {
   padding-top: 124px;
   padding-bottom: 80px;
   z-index: 2;
-  position: relative;
 
   @media (max-width: $vp-1199) {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
   }
 
   @media (max-width: $vp-767) {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
   }
 
   &:after {
     position: absolute;
     content: "";
-    width: 321px;
-    height: 413px;
+    width: 287px;
+    height: 494px;
     background-image: url("../img/plates-desktop.png");
-    bottom: -69px;
-    right: -137px;
+    bottom: -150px;
+    right: 0;
     z-index: -1;
+    object-fit: contain;
+
+    @media (max-width: $vp-1199) {
+      background-image: url("../img/plates-tablet.png");
+      width: 348px;
+      height: 377px;
+      bottom: -54px;
+      right: 0px;
+    }
+
+    @media (max-width: $vp-767) {
+      background-image: none;
+    }
   }
 }
 
@@ -92,6 +105,10 @@
   @media (max-width: $vp-1199) {
     padding-right: 54px;
   }
+
+  @media (max-width: $vp-767) {
+    padding-right: 45px;
+  }
 }
 
 .subscriptions__menu button {
@@ -129,6 +146,10 @@
 
     @media (max-width: $vp-1199) {
       top: 39px;
+    }
+
+    @media (max-width: $vp-767) {
+      top: 36px;
     }
   }
 }
@@ -170,7 +191,8 @@
   border: 7px solid $color-default-white;
 
   @media (max-width: $vp-767) {
-    padding: 50px 0;
+    padding-top: 41px;
+    padding-bottom: 40px;
   }
 
   &:hover {
@@ -185,6 +207,10 @@
   font-size: 26px;
   line-height: 29px;
   margin-bottom: 8px;
+
+  @media (max-width: $vp-1199) {
+    margin-bottom: 11px;
+  }
 
   @media (max-width: $vp-767) {
     font-size: 22px;
@@ -243,6 +269,14 @@
 
 .subscriptions__info span {
   color: $color-sapphire;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 54px;
+
+  @media (max-width: $vp-767) {
+    font-size: 46px;
+    line-height: 41px;
+  }
 }
 
 .subscriptions__info a {
@@ -270,4 +304,8 @@
 
 .subscriptions__info--more dd {
     font-size: 51px;
+
+    @media (max-width: $vp-767) {
+      font-size: 39px;
+    }
 }

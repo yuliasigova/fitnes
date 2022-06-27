@@ -6,6 +6,11 @@
     padding-top: 100px;
     margin-bottom: 100px;
   }
+
+  @media (max-width: $vp-767) {
+    padding-top: 75px;
+    margin-bottom: 70px;
+  }
 }
 
 .offers h2 {
@@ -22,6 +27,11 @@
     line-height: 42px;
     margin-bottom: 40px;
   }
+
+  @media (max-width: $vp-767) {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
 
 .offers ul {
@@ -34,6 +44,11 @@
 
   @media (max-width: $vp-1199) {
     grid-gap: 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -60,6 +75,16 @@
       grid-row: 1;
       grid-template-columns: 1fr 399px;
     }
+
+    @media (max-width: $vp-767) {
+     display: flex;
+     flex-direction: column;
+    }
+  }
+
+  @media (max-width: $vp-767) {
+    padding-top: 31px;
+    padding-bottom: 38px;
   }
 }
 
@@ -77,6 +102,10 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 39px;
+
+  @media (max-width: $vp-767) {
+    text-align: center;
+  }
 }
 
 .offers p {
@@ -86,6 +115,11 @@
 
   @media (max-width: $vp-1199) {
     margin-bottom: 49px;
+  }
+
+  @media (max-width: $vp-767) {
+    text-align: center;
+    margin-bottom: 26px;
   }
 }
 
@@ -97,6 +131,7 @@
 }
 
 .offers a {
+  display: block;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
@@ -105,12 +140,20 @@
   color: $color-resolution-blue;
   border-bottom: 1px solid $color-resolution-blue;
   width: 68px;
+
+  @media (max-width: $vp-767) {
+    align-self: center;
+  }
 }
 
 .offers li:first-of-type h3 {
   font-size: 28px;
   line-height: 44px;
   margin-bottom: 30px;
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 27px;
+  }
 }
 
 .offers li:first-of-type p {
@@ -135,5 +178,24 @@
   @media (max-width: $vp-1199) {
     width: 399px;
     height: 462px;
+    object-fit: cover;
   }
+
+  @media (max-width: $vp-767) {
+    width: 100%;
+    height: 299px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.offers li:nth-child(2n) p {
+  @media (max-width: $vp-1199) {
+    padding-right: 30px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-right: 0;
+  }
+
 }

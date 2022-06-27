@@ -1,5 +1,13 @@
 .coaches {
   margin-bottom: 120px;
+  position: relative;
+
+  @media (max-width: $vp-1199) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: $vp-767) {
+    margin-bottom: 71px;
+  }
 }
 
 .coaches h2 {
@@ -25,27 +33,15 @@
 
 .coaches ul {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(226px, 260px));
-  gap: 40px;
+  display: flex;
+  flex-direction: row;
   color: $color-default-white;
 
   @media (max-width: $vp-1199) {
-    padding: 0 56px;
-    grid-template-columns: repeat(auto-fill, 268px);
-    gap: 30px;
+    justify-content: space-between;
   }
-
-  @media (max-width: $vp-767) {
-    grid-template-columns: repeat(auto-fill, 226px);
-    padding: 0 32px;
-  }
-}
-
-.coaches button {
-  display: none;
 }
 
 .coaches__card {
@@ -55,12 +51,13 @@
   height: 294px;
   position: relative;
 
-  &--close {
-    display: none;
+  @media (max-width: 1300px) {
+    width: 240px;
   }
 
   @media (max-width: $vp-1199) {
     width: 268px;
+    height: 294px;
   }
 
   @media (max-width: $vp-767) {
@@ -75,17 +72,27 @@
   font-size: 18px;
   line-height: 27px;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%);
+  left: 44%;
+  transform: translate(-36%);
   bottom: 23px;
 }
 
 .coaches__card img {
-  width: 100%;
+  width: 260px;
   height: 294px;
   object-fit: cover;
 
+  @media (max-width: 1300px) {
+    width: 240px;
+  }
+
+  @media (max-width: $vp-1199) {
+    width: 268px;
+    height: 294px;
+  }
+
   @media (max-width: $vp-767) {
+    width: 226px;
     height: 274px;
   }
 }
@@ -94,10 +101,15 @@
   position: absolute;
   display: none;
   background-color: $color-sapphire--89;
-  width: 260px;
+  width: 100%;
   height: 294px;
   padding: 52px 40px;
   top: 0;
+
+  @media (max-width: 1300px) {
+    width: 240px;
+    padding: 52px 27px;
+  }
 
   @media (max-width: $vp-1199) {
     width: 268px;
@@ -106,6 +118,7 @@
   @media (max-width: $vp-767) {
     width: 226px;
     height: 274px;
+    padding: 42px 19px;
   }
 }
 
@@ -159,8 +172,91 @@
   }
 }
 
-.coaches__card:nth-child(2n+1) {
-  @media (max-width: $vp-1199) {
-    display: none;
+.coaches__wrapper {
+  position: relative;
+
+  @media (max-width: 1300px) {
+    width: 1080px;
   }
+
+  @media (max-width: $vp-1199) {
+    width: 566px;
+  }
+
+  @media (max-width: $vp-767) {
+    width: 226px;
+  }
+}
+
+.coaches__button {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  width: 18px;
+  height: 32px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+.coaches__button--left {
+  position: absolute;
+  top: 58%;
+  left: -62px;
+
+  @media (max-width: 1300px) {
+    left: -15px;
+  }
+
+  @media (max-width: $vp-1199) {
+    top: 56%;
+    left: calc(50vw - 345px);
+  }
+
+  @media (max-width: $vp-767) {
+    top: 57%;
+    left: calc(50vw - 152px);
+  }
+
+}
+
+.coaches__button--right {
+  position: absolute;
+  top: 58%;
+  right: -52px;
+
+  @media (max-width: 1300px) {
+    right: 0;
+  }
+
+  @media (max-width: $vp-1199) {
+    top: 56%;
+    right: calc(50vw - 333px);
+  }
+
+  @media (max-width: $vp-767) {
+    top: 57%;
+    right: calc(50vw - 147px);
+  }
+}
+
+.coaches__button svg {
+  stroke: $color-dark-gray;
+
+  &:hover,
+  &:focus {
+    stroke:  $color-sapphire--89;
+  }
+
+  @media (max-width: 767px) {
+    width: 10px;
+    height: 19px;
+  }
+}
+
+.coaches__card.is-close {
+  display: none;
+}
+
+.coaches__card.is-active {
+  display: flex;
 }
