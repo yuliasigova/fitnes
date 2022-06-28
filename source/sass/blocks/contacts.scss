@@ -21,6 +21,7 @@
   @media (max-width: $vp-767) {
     padding-left: 15px;
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -56,6 +57,7 @@
     line-height: 42px;
     margin-bottom: 32px;
   }
+
   @media (max-width: $vp-767) {
     font-size: 32px;
     line-height: 32px;
@@ -117,13 +119,18 @@
 
 .contacts a {
   color: inherit;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
 }
 
 .contacts li:nth-child(3n) {
   margin-left: 14px;
 
   @media (max-width: $vp-1199) {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
@@ -131,6 +138,6 @@
   margin-left: 14px;
 
   @media (max-width: $vp-1199) {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }

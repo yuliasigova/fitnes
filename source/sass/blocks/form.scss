@@ -68,7 +68,7 @@
   }
 
   @media (max-width: $vp-767) {
-    width: 100%
+    width: 100%;
   }
 }
 
@@ -103,4 +103,10 @@
   text-transform: uppercase;
   text-align: center;
   padding: 16px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
 }

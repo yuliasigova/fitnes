@@ -7,7 +7,8 @@
   <meta name="description" content="Главная страница фитнес-центра Sypergym">
   <title>Фитнес </title>
   <link rel="stylesheet" href="css/style.min.css">
-
+  <link rel="prefetch" href="fonts/bebasneueregular.woff2" as="font">
+  <link rel="prefetch" href="fonts/robotocondensedregular.woff2" as="font">
 </head>
 
 <body>
@@ -41,7 +42,7 @@
     </symbol>
   </svg>
   <main class="main">
-    <section class="caption">
+    <div class="caption">
       <nav class="caption__menu container">
         <a>
           <picture>
@@ -90,7 +91,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </div>
     <section class="description">
       <div class="description__info">
         <h2>Тренажерный зал</h2>
@@ -124,7 +125,8 @@
             alt="Изображение с тренажерным залом">
         </picture>
         <div class="description__video">
-          <iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw?" title="YouTube video player" allow="autoplay;" id="player" allowfullscreen></iframe>
+          <iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw?enablejsapi=1"
+            title="YouTube video player" allow="autoplay; encrypted-media" id="player" allowfullscreen></iframe>
           <div class="description__overlay">
             <button type="button" data-button="play" aria-label="кнопка включить видео">
             </button>
@@ -138,7 +140,7 @@
               <!-- 1x: 364px; 2x: 728px for desktop -->
               <!--1x: 266px; 2x: 532px for tablet -->
               <!--1x: 320px; 2x: 640px for mobile -->
-             <img srcset="
+              <img srcset="
               img/video-gym-desktop.jpg 364w,
               img/video-gym-tablet.jpg 266w,
               img/video-gym-mobile.jpg 320w,
@@ -326,177 +328,177 @@
         </svg>
       </button>
       <div class="coaches__wrapper swiper">
-          <ul class="swiper-wrapper">
-            <li tabindex="0" class="coaches__card swiper-slide">
-              <article>
-                <h3>Анна Павлова</h3>
-                <picture>
-                  <source type="image/webp" srcset="img/coach-anna-desktop.webp,
+        <ul class="swiper-wrapper">
+          <li tabindex="0" class="coaches__card swiper-slide">
+            <article>
+              <h3>Анна Павлова</h3>
+              <picture>
+                <source type="image/webp" srcset="img/coach-anna-desktop.webp,
                     img/coach-anna-desktop@2x.webp 2x">
-                  <!--1x: 260px; 2x: 520px for desktop-->
-                  <img src="img/coach-anna-desktop.jpg" srcset="img/coach-anna-desktop@2x.jpg 2x" width="260" height="294"
-                    alt="Изображение с тренером">
-                </picture>
-                <div class="coaches__layout">
-                  <p>Анна Павлова</p>
-                  <span>CrossFit</span>
-                  <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit </li>
-                    <li>Опыт — 6 лет</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li tabindex="0" class="coaches__card swiper-slide">
-              <article>
-                <h3>Алексей Лавров</h3>
-                <picture>
-                  <source type="image/webp" srcset="img/coach-aleksey-desktop.webp,
+                <!--1x: 260px; 2x: 520px for desktop-->
+                <img src="img/coach-anna-desktop.jpg" srcset="img/coach-anna-desktop@2x.jpg 2x" width="260" height="294"
+                  alt="Изображение с тренером">
+              </picture>
+              <div class="coaches__layout">
+                <p>Анна Павлова</p>
+                <span>CrossFit</span>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li tabindex="0" class="coaches__card swiper-slide">
+            <article>
+              <h3>Алексей Лавров</h3>
+              <picture>
+                <source type="image/webp" srcset="img/coach-aleksey-desktop.webp,
                 img/coach-aleksey-desktop@2x.webp 2x">
-                  <!--1x: 260px; 2x: 520px for desktop-->
-                  <img src="img/coach-aleksey-desktop.jpg" srcset="img/coach-aleksey-desktop@2x.jpg 2x" width="260"
-                    height="294" alt="Изображение с тренером">
-                </picture>
-                <div class="coaches__layout">
-                  <p>Алексей Лавров</p>
-                  <span>CrossFit</span>
-                  <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit </li>
-                    <li>Опыт — 6 лет</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li tabindex="0" class="coaches__card swiper-slide">
-              <article>
-                <h3>Александр Пашков</h3>
-                <picture>
-                  <source type="image/webp" srcset="img/coach-aleksandr-desktop.webp,
+                <!--1x: 260px; 2x: 520px for desktop-->
+                <img src="img/coach-aleksey-desktop.jpg" srcset="img/coach-aleksey-desktop@2x.jpg 2x" width="260"
+                  height="294" alt="Изображение с тренером">
+              </picture>
+              <div class="coaches__layout">
+                <p>Алексей Лавров</p>
+                <span>CrossFit</span>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li tabindex="0" class="coaches__card swiper-slide">
+            <article>
+              <h3>Александр Пашков</h3>
+              <picture>
+                <source type="image/webp" srcset="img/coach-aleksandr-desktop.webp,
                   img/coach-aleksandr-desktop@2x.webp 2x">
-                  <!--1x: 260px; 2x: 520px for desktop-->
-                  <img src="img/coach-aleksandr-desktop.jpg" srcset="img/coach-aleksandr-desktop@2x.jpg 2x" width="260"
-                    height="294" alt="Изображение с тренером">
-                </picture>
-                <div class="coaches__layout">
-                  <p>Александр Пашков</p>
-                  <span>CrossFit</span>
-                  <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit </li>
-                    <li>Опыт — 6 лет</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li tabindex="0" class="coaches__card swiper-slide">
-              <article>
-                <h3>Мария Кетова</h3>
-                <picture>
-                  <source type="image/webp" srcset="img/coach-maria-desktop.webp,
+                <!--1x: 260px; 2x: 520px for desktop-->
+                <img src="img/coach-aleksandr-desktop.jpg" srcset="img/coach-aleksandr-desktop@2x.jpg 2x" width="260"
+                  height="294" alt="Изображение с тренером">
+              </picture>
+              <div class="coaches__layout">
+                <p>Александр Пашков</p>
+                <span>CrossFit</span>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li tabindex="0" class="coaches__card swiper-slide">
+            <article>
+              <h3>Мария Кетова</h3>
+              <picture>
+                <source type="image/webp" srcset="img/coach-maria-desktop.webp,
                   img/coach-maria-desktop@2x.webp 2x">
-                  <!--1x: 260px; 2x: 520px for desktop-->
-                  <img src="img/coach-maria-desktop.jpg" srcset="img/coach-maria-desktop@2x.jpg 2x" width="260" height="294"
-                    alt="Изображение с тренером">
-                </picture>
-                <div class="coaches__layout">
-                  <p>Мария Кетова</p>
-                  <span>CrossFit</span>
-                  <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit </li>
-                    <li>Опыт — 6 лет</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li tabindex="0" class="coaches__card swiper-slide">
-              <article>
-                <h3>Анна Павлова</h3>
-                <picture>
-                  <source type="image/webp" srcset="img/coach-anna-desktop.webp,
+                <!--1x: 260px; 2x: 520px for desktop-->
+                <img src="img/coach-maria-desktop.jpg" srcset="img/coach-maria-desktop@2x.jpg 2x" width="260"
+                  height="294" alt="Изображение с тренером">
+              </picture>
+              <div class="coaches__layout">
+                <p>Мария Кетова</p>
+                <span>CrossFit</span>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li tabindex="0" class="coaches__card swiper-slide">
+            <article>
+              <h3>Анна Павлова</h3>
+              <picture>
+                <source type="image/webp" srcset="img/coach-anna-desktop.webp,
                   img/coach-anna-desktop@2x.webp 2x">
-                  <!--1x: 260px; 2x: 520px for desktop-->
-                  <img src="img/coach-anna-desktop.jpg" srcset="img/coach-anna-desktop@2x.jpg 2x" width="260" height="294"
-                    alt="Изображение с тренером">
-                </picture>
-                <div class="coaches__layout">
-                  <h3>Анна Павлова</h3>
-                  <span>CrossFit</span>
-                  <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit </li>
-                    <li>Опыт — 6 лет</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li tabindex="0" class="coaches__card swiper-slide">
-              <article>
-                <h3>Алексей Лавров</h3>
-                <picture>
-                  <source type="image/webp"  srcset="img/coach-aleksey-desktop.webp,
+                <!--1x: 260px; 2x: 520px for desktop-->
+                <img src="img/coach-anna-desktop.jpg" srcset="img/coach-anna-desktop@2x.jpg 2x" width="260" height="294"
+                  alt="Изображение с тренером">
+              </picture>
+              <div class="coaches__layout">
+                <h3>Анна Павлова</h3>
+                <span>CrossFit</span>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li tabindex="0" class="coaches__card swiper-slide">
+            <article>
+              <h3>Алексей Лавров</h3>
+              <picture>
+                <source type="image/webp" srcset="img/coach-aleksey-desktop.webp,
                   img/coach-aleksey-desktop@2x.webp 2x">
-                  <!--1x: 260px; 2x: 520px -->
-                  <img src="img/coach-aleksey-desktop.jpg" srcset="img/coach-aleksey-desktop@2x.jpg 2x" width="260" height="294"
-                    alt="Изображение с тренером">
-                </picture>
-                <div class="coaches__layout">
-                  <h3>Алексей Лавров</h3>
-                  <span>CrossFit</span>
-                  <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit </li>
-                    <li>Опыт — 6 лет</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li tabindex="0" class="coaches__card swiper-slide">
-              <article>
-                <h3>Александр Пашков</h3>
-                <picture>
-                  <source type="image/webp" srcset="img/coach-aleksandr-desktop.webp,
+                <!--1x: 260px; 2x: 520px -->
+                <img src="img/coach-aleksey-desktop.jpg" srcset="img/coach-aleksey-desktop@2x.jpg 2x" width="260"
+                  height="294" alt="Изображение с тренером">
+              </picture>
+              <div class="coaches__layout">
+                <h3>Алексей Лавров</h3>
+                <span>CrossFit</span>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li tabindex="0" class="coaches__card swiper-slide">
+            <article>
+              <h3>Александр Пашков</h3>
+              <picture>
+                <source type="image/webp" srcset="img/coach-aleksandr-desktop.webp,
                   img/coach-aleksandr-desktop@2x.webp 2x">
-                  <!--1x: 260px; 2x: 520px-->
-                  <img src="img/coach-aleksandr-desktop.jpg" srcset="img/coach-aleksandr-desktop@2x.jpg 2x"  width="260" height="294"
-                    alt="Изображение с тренером">
-                </picture>
-                <div class="coaches__layout">
-                  <h3>Александр Пашков</h3>
-                  <span>CrossFit</span>
-                  <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit </li>
-                    <li>Опыт — 6 лет</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-            <li tabindex="0" class="coaches__card swiper-slide">
-              <article>
-                <h3>Мария Кетова</h3>
-                <picture>
-                  <source type="image/webp" srcset="img/coach-maria-desktop.webp,
+                <!--1x: 260px; 2x: 520px-->
+                <img src="img/coach-aleksandr-desktop.jpg" srcset="img/coach-aleksandr-desktop@2x.jpg 2x" width="260"
+                  height="294" alt="Изображение с тренером">
+              </picture>
+              <div class="coaches__layout">
+                <h3>Александр Пашков</h3>
+                <span>CrossFit</span>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+          <li tabindex="0" class="coaches__card swiper-slide">
+            <article>
+              <h3>Мария Кетова</h3>
+              <picture>
+                <source type="image/webp" srcset="img/coach-maria-desktop.webp,
                   img/coach-maria-desktop@2x.webp 2x">
-                  <!--1x: 260px; 2x: 520px for desktop-->
-                  <img src="img/coach-maria-desktop.jpg" srcset="img/coach-maria-desktop@2x.jpg 2x" width="260" height="294"
-                    alt="Изображение с тренером">
-                </picture>
-                <div class="coaches__layout">
-                  <h3>Мария Кетова</h3>
-                  <span>CrossFit</span>
-                  <ul>
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по CrossFit </li>
-                    <li>Опыт — 6 лет</li>
-                  </ul>
-                </div>
-              </article>
-            </li>
-          </ul>
-        </div>
+                <!--1x: 260px; 2x: 520px for desktop-->
+                <img src="img/coach-maria-desktop.jpg" srcset="img/coach-maria-desktop@2x.jpg 2x" width="260"
+                  height="294" alt="Изображение с тренером">
+              </picture>
+              <div class="coaches__layout">
+                <h3>Мария Кетова</h3>
+                <span>CrossFit</span>
+                <ul>
+                  <li>Certified Level 3 Trainer</li>
+                  <li>Победитель чемпионата России по CrossFit </li>
+                  <li>Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="advantages">
       <div class="advantages__wrapper container">
@@ -524,8 +526,8 @@
           </li>
           <li class="advantages__card advantages__card--trainers">
             <span>100</span>
-              <h3>Тренажеров </h3>
-              <p>Современные тренажеры <br>на все группы мышц</p>
+            <h3>Тренажеров </h3>
+            <p>Современные тренажеры <br>на все группы мышц</p>
           </li>
           <li class="advantages__card advantages__card--comfort">
             <dl>
@@ -612,25 +614,28 @@
             <picture>
               <source type="image/webp" srcset="img/review-anna-desktop.webp,
             img/review-anna-desktop@2x.webp 2x">
-            <!--1x: 80px; 2x: 160px for desktop-->
-            <img src="img/review-anna-desktop.jpg" srcset="img/review-anna-desktop@2x.jpg 2x" width="80" height="80" alt="Аватар">
+              <!--1x: 80px; 2x: 160px for desktop-->
+              <img src="img/review-anna-desktop.jpg" srcset="img/review-anna-desktop@2x.jpg 2x" width="80" height="80"
+                alt="Аватар">
             </picture>
             <div>
               <h3>Анна Орлова</h3>
               <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
                 дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-              </div>
+            </div>
           </li>
           <li class="reviews__card is-close">
             <picture>
               <source type="image/webp" srcset="img/review-anna-desktop.webp,
             img/review-anna-desktop@2x.webp 2x">
-            <!--1x: 80px; 2x: 160px for desktop-->
-            <img src="img/review-anna-desktop.jpg" srcset="img/review-anna-desktop@2x.jpg 2x" width="80" height="80" alt="Аватар">
+              <!--1x: 80px; 2x: 160px for desktop-->
+              <img src="img/review-anna-desktop.jpg" srcset="img/review-anna-desktop@2x.jpg 2x" width="80" height="80"
+                alt="Аватар">
             </picture>
             <div>
               <h3>Светлана Павлова</h3>
-              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный.</p>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал
+                дружелюбный.</p>
             </div>
           </li>
         </ul>
@@ -643,11 +648,11 @@
           <form>
             <div class="form__container">
               <label aria-label="Заполните имя">
-                <input aria-label="Заполните имя" type="text" name="name" placeholder="Имя"
-                  required>
+                <input aria-label="Заполните имя" type="text" name="name" placeholder="Имя" required>
               </label>
               <label aria-label="Заполните телефон">
-                <input aria-label="Заполните телефон" type="tel" name="tel" pattern="^[1-9]+[0-9]*$" placeholder="Телефон" minlength="11" required>
+                <input aria-label="Заполните телефон" type="tel" name="tel" pattern="^[1-9]+[0-9]*$"
+                  placeholder="Телефон" minlength="11" required>
               </label>
             </div>
             <button type="submit">отправить</button>
@@ -731,6 +736,34 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    let player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        events: {
+          'onReady': onPlayerReady,
+        },
+      });
+    }
+    const playButton = document.querySelector('[data-button]');
+    const overlay = document.querySelector('.description__overlay');
+
+    function onPlayerReady() {
+      playButton.addEventListener('click', () => {
+        overlay.classList.add('is-active');
+        player.playVideo();
+      });
+    }
+    onPlayerReady();
+    document.addEventListener('click', (evt) => {
+      if (evt.target !== playButton) {
+        overlay.classList.remove('is-active');
+        player.pauseVideo()
+      }
+    });
+
+  </script>
 
 </body>
 

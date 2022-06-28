@@ -28,23 +28,33 @@
     padding-bottom: 30px;
   }
 
-  &:after {
+  &::after {
     position: absolute;
     content: "";
     width: 287px;
     height: 494px;
-    background-image: url("../img/plates-desktop.png");
+    background-image: image-set(
+      url("../img/plates-desktop@2x.webp") 2x,
+      url("../img/plates-desktop.webp") 1x,
+      url("../img/plates-desktop@2x.png") 2x,
+      url("../img/plates-desktop.png") 1x
+    );
     bottom: -150px;
     right: 0;
     z-index: -1;
     object-fit: contain;
 
     @media (max-width: $vp-1199) {
-      background-image: url("../img/plates-tablet.png");
+      background-image: image-set(
+        url("../img/plates-tablet@2x.webp") 2x,
+        url("../img/plates-tablet.webp") 1x,
+        url("../img/plates-tablet@2x.png") 2x,
+        url("../img/plates-tablet.png") 1x
+      );
       width: 348px;
       height: 377px;
       bottom: -54px;
-      right: 0px;
+      right: 0;
     }
 
     @media (max-width: $vp-767) {
@@ -73,7 +83,7 @@
     line-height: 32px;
     margin-bottom: 20px;
   }
-};
+}
 
 .subscriptions__menu ul {
   margin: 0 auto;
@@ -135,10 +145,10 @@
 }
 
 .subscriptions__menu button:focus,
-.subscriptions__menu button:hover{
+.subscriptions__menu button:hover {
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 42px;
     width: 100%;
     height: 2px;
@@ -196,7 +206,7 @@
   }
 
   &:hover {
-    border-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     border-image-slice: 1;
   }
 }
@@ -294,18 +304,18 @@
   margin: 0 auto;
   margin-bottom: 6px;
 
-    &:hover,
-    &:focus {
-      background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
-      border: none;
-      padding: 27px;
-    }
+  &:hover,
+  &:focus {
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    border: none;
+    padding: 27px;
+  }
 }
 
 .subscriptions__info--more dd {
-    font-size: 51px;
+  font-size: 51px;
 
-    @media (max-width: $vp-767) {
-      font-size: 39px;
-    }
+  @media (max-width: $vp-767) {
+    font-size: 39px;
+  }
 }

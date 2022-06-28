@@ -77,8 +77,8 @@
     }
 
     @media (max-width: $vp-767) {
-     display: flex;
-     flex-direction: column;
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -144,6 +144,11 @@
   @media (max-width: $vp-767) {
     align-self: center;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
 }
 
 .offers li:first-of-type h3 {
@@ -172,6 +177,11 @@
   color: $color-default-white;
   border-bottom: 1px solid $color-default-white;
   width: 79px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
 }
 
 .offers img {
@@ -197,5 +207,4 @@
   @media (max-width: $vp-767) {
     padding-right: 0;
   }
-
 }

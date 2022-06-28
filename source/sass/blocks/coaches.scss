@@ -5,6 +5,7 @@
   @media (max-width: $vp-1199) {
     margin-bottom: 100px;
   }
+
   @media (max-width: $vp-767) {
     margin-bottom: 71px;
   }
@@ -161,7 +162,7 @@
   padding-left: 31px;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 6px;
     height: 6px;
@@ -216,7 +217,6 @@
     top: 57%;
     left: calc(50vw - 152px);
   }
-
 }
 
 .coaches__button--right {
@@ -244,7 +244,7 @@
 
   &:hover,
   &:focus {
-    stroke:  $color-sapphire--89;
+    stroke: $color-sapphire--89;
   }
 
   @media (max-width: 767px) {

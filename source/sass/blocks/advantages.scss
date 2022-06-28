@@ -102,7 +102,6 @@
       padding-top: 5px;
       padding-left: 32px;
     }
-
   }
 
   &--experience {
@@ -117,7 +116,7 @@
     }
   }
 
- &--parking {
+  &--parking {
     padding-right: 10px;
 
     @media (max-width: $vp-1199) {
@@ -221,7 +220,7 @@
   font-weight: 700;
   font-size: 71px;
   line-height: 59px;
-  background: linear-gradient(127.61deg, #D10A42 0%, #0041CA 45.58%);
+  background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
   background-clip: text;
   color: transparent;
 

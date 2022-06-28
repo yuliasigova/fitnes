@@ -13096,22 +13096,26 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "../node_modules/swiper/swiper.esm.js");
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slider */ "./js/slider.js");
 
 var tabs = document.querySelector('.subscriptions');
 var contents = document.querySelectorAll('.subscriptions__info');
-tabs.addEventListener('click', function (evt) {
-  var id = evt.target.dataset.id;
 
-  if (id) {
-    contents.forEach(function (content) {
-      content.classList.remove('is-active');
-      content.classList.add('is-close');
-    });
-    var element = document.getElementById(id);
-    element.classList.add('is-active');
-  }
-});
+if (tabs) {
+  tabs.addEventListener('click', function (evt) {
+    var id = evt.target.dataset.id;
+
+    if (id) {
+      contents.forEach(function (content) {
+        content.classList.remove('is-active');
+        content.classList.add('is-close');
+      });
+      var element = document.getElementById(id);
+      element.classList.add('is-active');
+    }
+  });
+}
+
 var rightButton = document.querySelector('.reviews__button--right');
 var leftButton = document.querySelector('.reviews__button--left');
 var reviews = document.querySelectorAll('.reviews__card');
@@ -13147,51 +13151,53 @@ var showReview = function showReview() {
 };
 
 document.addEventListener('touchstart', handleTouchStart);
-document.addEventListener('touchmove', handleTouchMove); // Здесь будем хранить координаты прикосновения
-
+document.addEventListener('touchmove', handleTouchMove);
 var touchCoords = {
-  x: 0,
-  y: 0
+  x: 0
 };
 
-function handleTouchStart(event) {
-  var firstTouch = event.touches[0]; // Сохраняем начальные координаты когда прикоснулись
-
+function handleTouchStart(evt) {
+  var firstTouch = evt.touches[0];
   touchCoords.x = firstTouch.clientX;
-  touchCoords.y = firstTouch.clientY;
 }
 
 var DETECT_TRESHHOLD = 100;
 
 function handleTouchMove(event) {
-  if (!touchCoords.x || !touchCoords.y) {
+  if (!touchCoords.x) {
     return;
   }
 
-  var x = touchCoords.x,
-      y = touchCoords.y; // Сохраняем текущие координаты
-
+  var x = touchCoords.x;
   var xUp = event.touches[0].clientX;
-  var yUp = event.touches[0].clientY; // Вычисляем разницу
-
   var xDiff = x - xUp;
-  var yDiff = y - yUp; // Определяем в какую сторону было больше движения
 
-  var isHorizontal = Math.abs(xDiff) > Math.abs(yDiff);
-
-  if (isHorizontal) {
-    // Реагируем только если движение было существенным
-    if (Math.abs(xDiff) > DETECT_TRESHHOLD) {
-      if (xDiff > 0) {
-        index = index + 1;
-        showReview();
-      } else {
-        index = index - 1;
-        showReview();
-      }
+  if (Math.abs(xDiff) > DETECT_TRESHHOLD) {
+    if (xDiff > 0) {
+      index = index + 1;
+      showReview();
+    } else {
+      index = index - 1;
+      showReview();
     }
   }
 }
+
+_slider__WEBPACK_IMPORTED_MODULE_0__["swiper"].init();
+
+/***/ }),
+
+/***/ "./js/slider.js":
+/*!**********************!*\
+  !*** ./js/slider.js ***!
+  \**********************/
+/*! exports provided: swiper */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "swiper", function() { return swiper; });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "../node_modules/swiper/swiper.esm.js");
 
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.coaches__wrapper', {
   modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"]],
@@ -13217,22 +13223,7 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.coaches__wrapp
     }
   }
 });
-swiper.init();
-var playButton = document.querySelector('[data-button]');
-var overlay = document.querySelector('.description__overlay');
 
-function onPlayerReady() {
-  playButton.addEventListener('click', function () {
-    overlay.classList.add('is-active');
-  });
-}
-
-onPlayerReady();
-document.addEventListener('click', function (evt) {
-  if (evt.target !== playButton) {
-    overlay.classList.remove('is-active');
-  }
-});
 
 /***/ })
 

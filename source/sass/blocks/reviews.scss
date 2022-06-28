@@ -4,6 +4,7 @@
   @media (max-width: $vp-1199) {
     margin-bottom: 100px;
   }
+
   @media (max-width: $vp-767) {
     margin-bottom: 70px;
   }
@@ -132,7 +133,7 @@
   right: 4px;
 
   @media (max-width: $vp-1199) {
-    right: 0
+    right: 0;
   }
 
   @media (max-width: $vp-767) {
@@ -146,7 +147,7 @@
 
   &:hover,
   &:focus {
-    stroke:  $color-sapphire--89;
+    stroke: $color-sapphire--89;
   }
 
   @media (max-width: $vp-767) {
