@@ -106,6 +106,7 @@
   height: 294px;
   padding: 52px 40px;
   top: 0;
+  overflow: auto;
 
   @media (max-width: 1300px) {
     width: 240px;
@@ -240,6 +241,7 @@
 }
 
 .coaches__button svg {
+  fill: none;
   stroke: $color-dark-gray;
 
   &:hover,

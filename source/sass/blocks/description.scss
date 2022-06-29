@@ -75,6 +75,7 @@
 .description__info p {
   margin: 0;
   margin-bottom: 8px;
+  font-weight: 300;
 
   @media (max-width: $vp-1199) {
     padding: 0 80px;
@@ -83,7 +84,7 @@
 
   @media (max-width: $vp-767) {
     padding: 0;
-    padding-right: 21px;
+    padding-right: 27px;
     margin-bottom: 33px;
   }
 }

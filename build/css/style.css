@@ -986,6 +986,7 @@ button,
 .description__info p {
   margin: 0;
   margin-bottom: 8px;
+  font-weight: 300;
 }
 
 .description__media {
@@ -1418,6 +1419,7 @@ button,
   height: 294px;
   padding: 52px 40px;
   top: 0;
+  overflow: auto;
 }
 
 .coaches__card:focus-within .coaches__layout,
@@ -1490,6 +1492,7 @@ button,
 }
 
 .coaches__button svg {
+  fill: none;
   stroke: #afafaf;
 }
 
@@ -1861,6 +1864,7 @@ button,
 }
 
 .reviews__button svg {
+  fill: none;
   stroke: #afafaf;
 }
 
@@ -2362,6 +2366,7 @@ button,
 
   .promo__info {
     grid-column-gap: 29px;
+    width: 200px;
   }
 
   .promo__info h2 {
@@ -2378,6 +2383,10 @@ button,
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 0;
+  }
+
+  .promo__info dd ::before {
+    top: 3px;
   }
 
   .promo__info span {
@@ -2400,6 +2409,7 @@ button,
 
   .promo img {
     height: 292px;
+    width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
   }
@@ -2777,7 +2787,7 @@ button,
 
   .description__info p {
     padding: 0;
-    padding-right: 21px;
+    padding-right: 27px;
     margin-bottom: 33px;
   }
 

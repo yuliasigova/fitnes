@@ -35,6 +35,7 @@
 
   @media (max-width: $vp-1199) {
     grid-column-gap: 29px;
+    width: 200px;
   }
 }
 
@@ -91,6 +92,10 @@
     width: 100%;
     height: 1px;
     background-color: $color-default-white;
+
+    @media (max-width: $vp-1199) {
+      top: 3px;
+    }
   }
 }
 
@@ -148,6 +153,7 @@
 .promo img {
   @media (max-width: $vp-1199) {
     height: 292px;
+    width: 100%;
     object-fit: cover;
   }
 }
