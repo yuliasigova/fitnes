@@ -19,8 +19,9 @@
 }
 
 @font-face {
-  font-family: "roboto";
-  src: url("../fonts/robotocondensedlight.woff2") format("woff2"),
+  font-family: "RC";
+  src: local("RC"),
+    url("../fonts/robotocondensedlight.woff2") format("woff2"),
     url("../fonts/robotocondensedlight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -28,8 +29,9 @@
 }
 
 @font-face {
-  font-family: "roboto";
-  src: url("../fonts/robotocondensedregular.woff2") format("woff2"),
+  font-family: "RC";
+  src: local("RC"),
+    url("../fonts/robotocondensedregular.woff2") format("woff2"),
     url("../fonts/robotocondensedregular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -37,8 +39,9 @@
 }
 
 @font-face {
-  font-family: "roboto";
-  src: url("../fonts/robotocondensedbold.woff2") format("woff2"),
+  font-family: "RC";
+  src: local("RC"),
+    url("../fonts/robotocondensedbold.woff2") format("woff2"),
     url("../fonts/robotocondensedbold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
