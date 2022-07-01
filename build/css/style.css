@@ -242,24 +242,24 @@
 }
 
 @font-face {
-  font-family: "RC";
-  src: local("RC"), url("../fonts/robotocondensedlight.woff2") format("woff2"), url("../fonts/robotocondensedlight.woff") format("woff");
+  font-family: "Roboto Condensed";
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+  src: url("../fonts/robotocondensedlight.woff2") format("woff2"), url("../fonts/robotocondensedlight.woff") format("woff");
 }
 
 @font-face {
-  font-family: "RC";
-  src: local("RC"), url("../fonts/robotocondensedregular.woff2") format("woff2"), url("../fonts/robotocondensedregular.woff") format("woff");
+  font-family: "Roboto Condensed";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  src: url("../fonts/robotocondensed.woff2") format("woff2"), url("../fonts/robotocondensed.woff") format("woff");
 }
 
 @font-face {
-  font-family: "RC";
-  src: local("RC"), url("../fonts/robotocondensedbold.woff2") format("woff2"), url("../fonts/robotocondensedbold.woff") format("woff");
+  font-family: "Roboto Condensed";
+  src: url("../fonts/robotocondensedbold.woff2") format("woff2"), url("../fonts/robotocondensedbold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -671,7 +671,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Roboto Condensed", "Arial Narrow", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #102654;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -681,6 +681,13 @@ html {
 body {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 a {
@@ -802,6 +809,12 @@ button,
   margin: 0 auto;
 }
 
+.main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
 .caption {
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   min-height: 658px;
@@ -817,7 +830,7 @@ button,
 }
 
 .caption__block {
-  padding-top: 117px;
+  padding-top: 114px;
   padding-left: 100px;
   position: relative;
   display: -webkit-box;
@@ -919,15 +932,27 @@ button,
   column-gap: 50px;
 }
 
-.caption__link {
-  display: -ms-grid;
-  display: grid;
+.caption__menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
-  justify-content: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.caption__link {
   font-size: 26px;
   line-height: 23px;
   letter-spacing: 0.03em;
@@ -1128,7 +1153,8 @@ button,
 }
 
 .subscriptions__menu button:focus::before,
-.subscriptions__menu button:hover::before {
+.subscriptions__menu button:hover::before,
+.subscriptions__menu button.is-active::before {
   position: absolute;
   content: "";
   top: 42px;
@@ -1699,7 +1725,7 @@ button,
   border: none;
 }
 
-.offers div {
+.offers__wrapper {
   color: #ffffff;
   background-color: #ed0233;
   padding: 34px 45px 45px;
@@ -1853,13 +1879,13 @@ button,
 
 .reviews__button--left {
   position: absolute;
-  top: 43%;
+  top: 102px;
   left: -7px;
 }
 
 .reviews__button--right {
   position: absolute;
-  top: 43%;
+  top: 102px;
   right: 4px;
 }
 
@@ -2079,6 +2105,9 @@ button,
 
 .footer {
   background-color: #030a1a;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .footer__wrapper {
@@ -2341,7 +2370,8 @@ button,
   }
 
   .subscriptions__menu button:focus::before,
-  .subscriptions__menu button:hover::before {
+  .subscriptions__menu button:hover::before,
+  .subscriptions__menu button.is-active::before {
     top: 39px;
   }
 
@@ -2852,7 +2882,8 @@ button,
   }
 
   .subscriptions__menu button:focus::before,
-  .subscriptions__menu button:hover::before {
+  .subscriptions__menu button:hover::before,
+  .subscriptions__menu button.is-active::before {
     top: 36px;
   }
 
@@ -2919,18 +2950,18 @@ button,
   }
 
   .coaches__card {
-    width: 226px;
+    width: 100%;
     height: 274px;
   }
 
   .coaches__card img {
-    width: 226px;
+    width: 100%;
     height: 274px;
   }
 
   .coaches__layout {
-    width: 226px;
-    height: 274px;
+    width: 100%;
+    height: 100%;
     padding: 42px 19px;
   }
 
@@ -2939,17 +2970,20 @@ button,
   }
 
   .coaches__wrapper {
-    width: 226px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0 30px;
   }
 
   .coaches__button--left {
-    top: 57%;
-    left: calc(50vw - 152px);
+    top: 197px;
+    left: 8px;
   }
 
   .coaches__button--right {
-    top: 57%;
-    right: calc(50vw - 147px);
+    top: 197px;
+    right: 13px;
   }
 
   .coaches__button svg {
@@ -3046,6 +3080,8 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    max-width: 420px;
+    margin: 0 auto;
   }
 
   .offers li:first-of-type {
@@ -3082,13 +3118,16 @@ button,
     margin-bottom: 27px;
   }
 
-  .offers img {
+  .offers__img {
     width: 100%;
-    height: 299px;
+    height: 100%;
+  }
+
+  .offers img {
+    height: auto;
+    width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    -o-object-position: top;
-    object-position: top;
   }
 
   .offers li:nth-child(2n) p {
@@ -3109,10 +3148,6 @@ button,
     padding: 0 32px;
   }
 
-  .reviews ul {
-    width: 226px;
-  }
-
   .reviews__card {
     padding: 46px 25px 25px;
     position: relative;
@@ -3122,6 +3157,7 @@ button,
   .reviews h3 {
     padding-left: 99px;
     margin-bottom: 18px;
+    min-height: 60px;
   }
 
   .reviews p {
@@ -3137,13 +3173,12 @@ button,
   }
 
   .reviews__button--left {
-    top: 46%;
-    left: calc(50vw - 167px);
+    top: 45%;
+    left: -7px;
   }
 
   .reviews__button--right {
-    top: 46%;
-    right: calc(50vw - 162px);
+    top: 45%;
   }
 
   .reviews__button svg {

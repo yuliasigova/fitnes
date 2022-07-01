@@ -2,6 +2,7 @@ import {swiper} from './slider';
 
 const tabs = document.querySelector('.subscriptions');
 const contents = document.querySelectorAll('.subscriptions__info');
+const buttons = document.querySelectorAll('.subscriptions__button');
 
 if (tabs) {
   tabs.addEventListener('click', (evt) => {
@@ -11,8 +12,12 @@ if (tabs) {
         content.classList.remove('is-active');
         content.classList.add('is-close');
       });
+      buttons.forEach((button) => {
+        button.classList.remove('is-active');
+      });
       const element = document.getElementById(id);
       element.classList.add('is-active');
+      evt.target.classList.add('is-active');
     }
   });
 }

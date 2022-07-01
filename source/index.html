@@ -8,7 +8,7 @@
   <title>Фитнес </title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="prefetch" href="fonts/bebasneueregular.woff2" as="font">
-  <link rel="prefetch" href="fonts/robotocondensedregular.woff2" as="font">
+  <link rel="prefetch" href="fonts/robotocondensed.woff2" as="font">
 </head>
 
 <body>
@@ -22,7 +22,11 @@
             <img src="img/svg/logo-desktop.svg" width="89" height="20" alt="Лого сайта">
           </picture>
         </a>
-        <a class="caption__link" href="tel:88005555555">8-800-555-55-55</a>
+        <ul>
+          <li>
+            <a class="caption__link" href="tel:88005555555">8-800-555-55-55</a>
+          </li>
+        </ul>
       </nav>
       <div class="caption__wrapper container">
         <div class="caption__block">
@@ -38,7 +42,7 @@
         <picture>
           <source type="image/webp" media="(min-width: 1200px)" srcset="img/man-desktop.webp,
             img/man-desktop@2x.webp 2x">
-          <source type="image/webp" media="(max-width: 1199px) and (min-width: 768px)"
+          <source type="image/webp" media="(max-width: 1199px)"
             srcset="img/man-tablet.webp, img/man-tablet@2x.webp 2x">
           <!--1x: 500px; 2x: 1000px for desktop-->
           <!--1x: 324px; 2x: 648px for tablet -->
@@ -67,7 +71,7 @@
       <div class="description__info">
         <h2>Тренажерный зал</h2>
         <h3>Просторный зал площадью 900 кв/м</h3>
-        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
+        <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья.
           Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
         <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
           несколько оборудованных залов для различных видов групповых занятий.</p>
@@ -96,7 +100,7 @@
             alt="Изображение с тренажерным залом">
         </picture>
         <div class="description__video">
-          <iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw?enablejsapi=1"
+          <iframe width="364" height="228" tabindex="-1" src="https://www.youtube.com/embed/9TZXsZItgdw?enablejsapi=1"
             title="YouTube video player" allow="autoplay; encrypted-media" id="player" allowfullscreen></iframe>
           <div class="description__overlay">
             <button type="button" data-button="play" aria-label="кнопка включить видео">
@@ -133,13 +137,13 @@
         <div class="subscriptions__menu">
           <ul>
             <li class="subscriptions__item" data-id="one">
-              <button type="button" data-id="one">1 месяц</button>
+              <button type="button" class="subscriptions__button is-active" data-id="one">1 месяц</button>
             </li>
             <li class="subscriptions__item" data-id="six">
-              <button type="button" data-id="six"> 6 месяцев</button>
+              <button type="button" class="subscriptions__button" data-id="six"> 6 месяцев</button>
             </li>
             <li class="subscriptions__item" data-id="twelve">
-              <button type="button" data-id="twelve">12 месяцев</button>
+              <button type="button" class="subscriptions__button" data-id="twelve">12 месяцев</button>
             </li>
           </ul>
         </div>
@@ -528,11 +532,12 @@
       <h2>Акции</h2>
       <ul>
         <li>
-          <div>
+          <div class="offers__wrapper">
             <h3>Год<span>4999</span></h3>
             <p>Безлимитный абонемент в тренажерный зал</p>
             <a href="#">подробнее</a>
           </div>
+          <div class="offers__img">
           <picture>
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/offer-desktop.webp,
             img/offer-desktop@2x.webp 2x">
@@ -554,6 +559,7 @@
         (max-width: 1199px) 399px,
         (min-width: 1200px) 290px" src="img/offer-desktop.jpg" width="280" height="462" alt="Изображение с тренером">
           </picture>
+        </div>
         </li>
         <li>
           <h3>Месяц бесплатно</h3>
@@ -705,7 +711,7 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <script defer src="https://www.youtube.com/iframe_api"></script>
   <script>
     let player;
     function onYouTubeIframeAPIReady() {

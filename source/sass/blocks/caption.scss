@@ -38,7 +38,7 @@
 }
 
 .caption__block {
-  padding-top: 117px;
+  padding-top: 114px;
   padding-left: 100px;
   position: relative;
   display: flex;
@@ -188,10 +188,18 @@
   }
 }
 
-.caption__link {
-  display: grid;
+.caption__menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   flex-grow: 1;
-  justify-content: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.caption__link {
   font-size: 26px;
   line-height: 23px;
   letter-spacing: 0.03em;

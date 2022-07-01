@@ -11,6 +11,7 @@ const swiper = new Swiper('.coaches__wrapper', {
     320: {
       slidesPerView: 1,
       slidesPerGroup: 1,
+      spaceBetween: 30,
     },
     768: {
       slidesPerView: 2,

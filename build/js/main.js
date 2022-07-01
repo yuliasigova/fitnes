@@ -13100,6 +13100,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var tabs = document.querySelector('.subscriptions');
 var contents = document.querySelectorAll('.subscriptions__info');
+var buttons = document.querySelectorAll('.subscriptions__button');
 
 if (tabs) {
   tabs.addEventListener('click', function (evt) {
@@ -13110,8 +13111,12 @@ if (tabs) {
         content.classList.remove('is-active');
         content.classList.add('is-close');
       });
+      buttons.forEach(function (button) {
+        button.classList.remove('is-active');
+      });
       var element = document.getElementById(id);
       element.classList.add('is-active');
+      evt.target.classList.add('is-active');
     }
   });
 }
@@ -13209,7 +13214,8 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.coaches__wrapp
   breakpoints: {
     320: {
       slidesPerView: 1,
-      slidesPerGroup: 1
+      slidesPerGroup: 1,
+      spaceBetween: 30
     },
     768: {
       slidesPerView: 2,

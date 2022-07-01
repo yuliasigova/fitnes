@@ -47,10 +47,6 @@
   padding: 0;
   list-style: none;
   max-width: 566px;
-
-  @media (max-width: $vp-767) {
-    width: 226px;
-  }
 }
 
 .reviews__card {
@@ -78,6 +74,7 @@
   @media (max-width: $vp-767) {
     padding-left: 99px;
     margin-bottom: 18px;
+    min-height: 60px;
   }
 }
 
@@ -114,7 +111,7 @@
 
 .reviews__button--left {
   position: absolute;
-  top: 43%;
+  top: 102px;
   left: -7px;
 
   @media (max-width: $vp-1199) {
@@ -122,14 +119,14 @@
   }
 
   @media (max-width: $vp-767) {
-    top: 46%;
-    left: calc(50vw - 167px);
+    top: 45%;
+    left: -7px;
   }
 }
 
 .reviews__button--right {
   position: absolute;
-  top: 43%;
+  top: 102px;
   right: 4px;
 
   @media (max-width: $vp-1199) {
@@ -137,8 +134,7 @@
   }
 
   @media (max-width: $vp-767) {
-    top: 46%;
-    right: calc(50vw - 162px);
+    top: 45%;
   }
 }
 

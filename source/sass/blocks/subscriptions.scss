@@ -145,7 +145,8 @@
 }
 
 .subscriptions__menu button:focus,
-.subscriptions__menu button:hover {
+.subscriptions__menu button:hover,
+.subscriptions__menu button.is-active {
   &::before {
     position: absolute;
     content: "";
