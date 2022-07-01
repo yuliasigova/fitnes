@@ -38,6 +38,7 @@
 
   @media (max-width: $vp-767) {
     width: 100%;
+    max-width: 670px;
     padding: 0 32px;
   }
 }
@@ -119,7 +120,11 @@
   }
 
   @media (max-width: $vp-767) {
-    top: 45%;
+    top: 110px;
+  }
+
+  @media (max-width: 399px) {
+    top: 154px;
     left: -7px;
   }
 }
@@ -134,7 +139,11 @@
   }
 
   @media (max-width: $vp-767) {
-    top: 45%;
+    top: 110px;
+  }
+
+  @media (max-width: 399px) {
+    top: 154px;
   }
 }
 

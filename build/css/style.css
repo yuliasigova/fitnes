@@ -2942,6 +2942,7 @@ button,
 
   .coaches {
     margin-bottom: 71px;
+    max-width: 360px;
   }
 
   .coaches h2 {
@@ -3145,6 +3146,7 @@ button,
 
   .reviews__wrapper {
     width: 100%;
+    max-width: 670px;
     padding: 0 32px;
   }
 
@@ -3173,12 +3175,11 @@ button,
   }
 
   .reviews__button--left {
-    top: 45%;
-    left: -7px;
+    top: 110px;
   }
 
   .reviews__button--right {
-    top: 45%;
+    top: 110px;
   }
 
   .reviews__button svg {
@@ -3302,5 +3303,16 @@ button,
   .footer__social-item--vk svg {
     width: 32px;
     height: 27px;
+  }
+}
+
+@media (max-width: 399px) {
+  .reviews__button--left {
+    top: 154px;
+    left: -7px;
+  }
+
+  .reviews__button--right {
+    top: 154px;
   }
 }
