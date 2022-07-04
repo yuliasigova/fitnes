@@ -4,11 +4,12 @@
 
   @media (max-width: $vp-1199) {
     margin-bottom: 100px;
+    max-width: 600px;
   }
 
   @media (max-width: $vp-767) {
     margin-bottom: 71px;
-    max-width: 360px;
+    max-width: 400px;
   }
 }
 
@@ -64,7 +65,7 @@
 
   @media (max-width: $vp-767) {
     width: 100%;
-    height: 274px;
+    height: auto;
   }
 }
 
@@ -94,6 +95,11 @@
   }
 
   @media (max-width: $vp-767) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 350px) {
     width: 100%;
     height: 274px;
   }
@@ -194,54 +200,42 @@
   }
 }
 
-.coaches__button {
+.coaches__buttons {
   position: absolute;
+  display: flex;
+  width: 110%;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 2;
+  left: -62px;
+  top: 228px;
+
+  @media (max-width: 1300px) {
+    width: 100%;
+    top: 210px;
+    left: 0;
+  }
+
+  @media (max-width: $vp-1199) {
+    width: 89%;
+    left: 38px;
+    top: 210px;
+  }
+
+  @media (max-width: $vp-767) {
+    left: 8px;
+    width: 94%;
+    top: 196px;
+  }
+}
+
+.coaches__button {
   border: none;
   cursor: pointer;
   width: 18px;
   height: 32px;
   background-color: transparent;
   box-sizing: border-box;
-}
-
-.coaches__button--left {
-  position: absolute;
-  top: 58%;
-  left: -62px;
-
-  @media (max-width: 1300px) {
-    left: -15px;
-  }
-
-  @media (max-width: $vp-1199) {
-    top: 56%;
-    left: calc(50vw - 345px);
-  }
-
-  @media (max-width: $vp-767) {
-    top: 197px;
-    left: 8px;
-  }
-}
-
-.coaches__button--right {
-  position: absolute;
-  top: 58%;
-  right: -52px;
-
-  @media (max-width: 1300px) {
-    right: 0;
-  }
-
-  @media (max-width: $vp-1199) {
-    top: 56%;
-    right: calc(50vw - 333px);
-  }
-
-  @media (max-width: $vp-767) {
-    top: 197px;
-    right: 13px;
-  }
 }
 
 .coaches__button svg {
